@@ -11,6 +11,9 @@ app.use(express.json());
 app.use("/",userRouter)
 app.use("/bug",bugRouter)
 
+app.get("/home",(req,res)=>{
+res.send("msg:welcome to home")
+})
 
 app.listen(process.env.port, async (req, res) => {
   try {
